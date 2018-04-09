@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "id": "12",
+      "firstName": "Sabbyasachi",
+      "age": 25,
+      "companyId": "C01"
+    },
+    {
+      "id": "32",
+      "firstName": "Soumen",
+      "age": 27,
+      "companyId": "C02"
+    },
+    {
+      "id": "9",
+      "firstName": "Susmita",
+      "age": 22,
+      "companyId": "C01"
+    }
+  ],
+  "companies": [
+    {
+      "id": "C01",
+      "name": "ITC",
+      "description": "Service"
+    },
+    {
+      "id": "C02",
+      "name": "Suzuki",
+      "description": "Automobile"
+    }
+  ]
+}

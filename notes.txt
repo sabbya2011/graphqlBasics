@@ -1,0 +1,81 @@
+{
+  company(id:"C01"){
+    id,
+    name,
+    description,
+    users{
+      id,
+      firstName,
+      age
+    }
+  }
+}
+=======================================================================
+query MyQuery{
+  company(id:"C01"){
+    id,
+    name,
+    description,
+    users{
+      id,
+      firstName,
+      age
+    }
+  }
+}
+
+=======================================================================
+
+{
+  q01:company(id:"C01"){
+    id,
+    name,
+    description,
+    users{
+      id,
+      firstName,
+      age
+    }
+  }
+  q02:company(id:"C01"){
+    id,
+    name,
+    description,
+    users{
+      id,
+      firstName,
+      age
+    }
+  }
+}
+===============================================================================================
+{
+  q01:company(id:"C01"){
+    ...CompanyDetails
+    users{
+      id,
+      firstName,
+      age
+    }
+  }
+  q02:company(id:"C01"){
+    ...CompanyDetails
+    users{
+      id,
+      firstName,
+      age
+    }
+  }
+}
+fragment CompanyDetails on Company{
+  id,
+  name,
+  description
+}
+============================================================================
+mutation{
+  addUser(firstName:"Soumyadip",age:26,companyId:"C02"){
+    firstName,
+    age
+  }
+}
